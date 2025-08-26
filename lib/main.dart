@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => AuthProvider()..initializeAuth(),
       child: MaterialApp(
-        title: 'Akalpit',
+        title: 'Penverse',
         theme: AppTheme.lightTheme,
         initialRoute: '/',
         routes: {

@@ -65,7 +65,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
           ),
         ],
       ),
-      body: Column(
+      body: const Column(
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(16),

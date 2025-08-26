@@ -7,10 +7,10 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: darkBackground,
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
       primary: primaryColor,
       secondary: Colors.white,
-      background: darkBackground,
+      surface: darkBackground,
     ),
     textTheme: const TextTheme(
       displayLarge: TextStyle(

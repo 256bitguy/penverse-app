@@ -5,6 +5,7 @@ import '../widgets/mobile_navigation.dart';
 import '../widgets/profile_menu.dart';
 import '../widgets/web_navigation.dart';
 import 'tab_views.dart';
+import "../../../Vocabulary/screens/vocab/vocab_screen.dart";
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _getTabView() {
     switch (_currentIndex) {
       case 0:
-        return const HomeTabView();
+        return const VocabScreen();
       case 1:
         return const FeedTabView();
       case 2:
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 4:
         return const CommunitiesTabView();
       default:
-        return const HomeTabView();
+        return const VocabScreen();
     }
   }
 
@@ -126,10 +127,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Text(
                           _getFeatureTitle(),
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style:
+                              Theme.of(context).textTheme.titleLarge?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
                         const Spacer(),
                         IconButton(
@@ -183,7 +185,8 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {},
           ),
           IconButton(
-            icon: const Icon(Icons.notifications_outlined, color: Colors.white70),
+            icon:
+                const Icon(Icons.notifications_outlined, color: Colors.white70),
             onPressed: () {},
           ),
         ],
