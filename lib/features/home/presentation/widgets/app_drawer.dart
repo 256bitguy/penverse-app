@@ -1,3 +1,4 @@
+import 'package:Akalpit/features/home/presentation/widgets/vocab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../auth/providers/auth_provider.dart';
@@ -8,9 +9,9 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authProvider = Provider.of<AuthProvider>(context);
-    
+
     return Drawer(
-      backgroundColor: const Color(0xFF1B1E23),
+      backgroundColor: Colors.deepPurple.shade700,
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -30,7 +31,8 @@ class AppDrawer extends StatelessWidget {
                 const CircleAvatar(
                   radius: 32,
                   backgroundColor: Colors.white24,
-                  child: Icon(Icons.person_outline, 
+                  child: Icon(
+                    Icons.person_outline,
                     color: Colors.white,
                     size: 40,
                   ),
@@ -47,33 +49,67 @@ class AppDrawer extends StatelessWidget {
               ],
             ),
           ),
+
           ListTile(
-            leading: const Icon(Icons.person_outline, color: Colors.white70),
-            title: const Text('Profile', 
+            leading: const Icon(Icons.quiz_outlined, color: Colors.white70),
+            title: const Text(
+              'Quiz',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
-              Navigator.pop(context); // Close drawer
-              // Add profile navigation here
+             Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const VocabScreen()),
+);
+
             },
           ),
+
           ListTile(
-            leading: const Icon(Icons.settings_outlined, color: Colors.white70),
-            title: const Text('Settings', 
+            leading: const Icon(Icons.edit_note_outlined, color: Colors.white70),
+            title: const Text(
+              'Editorials',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
-              Navigator.pop(context); // Close drawer
-              // Add settings navigation here
+              Navigator.pop(context);
+              // Add editorials navigation here
             },
           ),
+
+          ListTile(
+            leading: const Icon(Icons.book_outlined, color: Colors.white70),
+            title: const Text(
+              'Stories',
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              // Add stories navigation here
+            },
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.category_outlined, color: Colors.white70),
+            title: const Text(
+              'Miscellaneous',
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              // Add miscellaneous navigation here
+            },
+          ),
+
           const Divider(
             color: Colors.white24,
             height: 1,
           ),
+
           ListTile(
-            leading: const Icon(Icons.logout_outlined, color: Colors.white70),
-            title: const Text('Logout', 
+            leading: const Icon(Icons.logout, color: Colors.white70),
+            title: const Text(
+              'Logout',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () async {

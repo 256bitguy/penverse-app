@@ -65,7 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Widget _buildSkipButton() {
     final isDesktop = ResponsiveUtils.isDesktop(context);
-    
+
     return Align(
       alignment: Alignment.topRight,
       child: Padding(
@@ -92,7 +92,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget _buildBottomSection() {
     final isDesktop = ResponsiveUtils.isDesktop(context);
     final isTablet = ResponsiveUtils.isTablet(context);
-    
+
     return Container(
       padding: EdgeInsets.all(isDesktop ? 48 : 24),
       child: Column(
@@ -151,7 +151,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     final isDesktop = ResponsiveUtils.isDesktop(context);
-    
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: SafeArea(
@@ -163,7 +163,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 onHorizontalDragEnd: _handleDragEnd,
                 child: PageView.builder(
                   controller: _pageController,
-                  onPageChanged: (index) => setState(() => _currentPage = index),
+                  onPageChanged: (index) =>
+                      setState(() => _currentPage = index),
                   itemCount: AppConstants.onboardingItems.length,
                   itemBuilder: (context, index) => OnboardingContent(
                     item: AppConstants.onboardingItems[index],

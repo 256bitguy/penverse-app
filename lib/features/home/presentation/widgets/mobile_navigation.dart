@@ -29,14 +29,14 @@ class MobileNavigation extends StatelessWidget {
           _NavItem(
             icon: Icons.home_outlined,
             selectedIcon: Icons.home,
-            label: 'Home',
+            label: 'Vocab',
             isSelected: selectedIndex == 0,
             onTap: () => onDestinationSelected(0),
           ),
           _NavItem(
             icon: Icons.dynamic_feed_outlined,
             selectedIcon: Icons.dynamic_feed,
-            label: 'Feed',
+            label: 'grammer',
             isSelected: selectedIndex == 1,
             onTap: () => onDestinationSelected(1),
           ),
@@ -47,14 +47,14 @@ class MobileNavigation extends StatelessWidget {
           _NavItem(
             icon: Icons.event_outlined,
             selectedIcon: Icons.event,
-            label: 'Events',
+            label: 'misc.',
             isSelected: selectedIndex == 3,
             onTap: () => onDestinationSelected(3),
           ),
           _NavItem(
             icon: Icons.people_outline,
             selectedIcon: Icons.people,
-            label: 'Communities',
+            label: 'phrasal',
             isSelected: selectedIndex == 4,
             onTap: () => onDestinationSelected(4),
           ),
