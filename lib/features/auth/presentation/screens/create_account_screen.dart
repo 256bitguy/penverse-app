@@ -19,7 +19,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   final _usernameController = TextEditingController();
   bool _isPasswordVisible = false;
   bool _isLoading = false;
-  final List<bool> _passwordCriteria = List.filled(3, false);
+  List<bool> _passwordCriteria = List.filled(3, false);
 
   @override
   void dispose() {
@@ -125,7 +125,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(

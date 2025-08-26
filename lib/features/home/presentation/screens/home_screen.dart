@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildContent() {
     return Container(
-      color: const Color(0xFF0D1117),
+      color: const Color(0xFF0D0D25),
       child: _getTabView(),
     );
   }

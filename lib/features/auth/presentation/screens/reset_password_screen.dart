@@ -23,7 +23,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
       List.generate(4, (index) => TextEditingController());
   final _newPasswordController = TextEditingController();
   bool _isPasswordVisible = false;
-  final List<bool> _passwordCriteria = List.filled(3, false);
+  List<bool> _passwordCriteria = List.filled(3, false);
   bool _isVerified = false;
 
   @override
@@ -144,7 +144,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(

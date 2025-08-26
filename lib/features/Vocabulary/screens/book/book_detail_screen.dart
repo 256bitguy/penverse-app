@@ -10,10 +10,10 @@ class BookDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1B1E23),
+      backgroundColor: const Color(0xFF3F3F7D),
       appBar: AppBar(
         
-        backgroundColor: const Color(0xFF1B1E23),
+        backgroundColor: const Color(0xFF3F3F7D),
         title: Text(
           book.title,
           style: const TextStyle(color: Colors.white, fontSize: 22,),
@@ -29,7 +29,7 @@ class BookDetailScreen extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 16),
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: const Color(0xFF2A2F36),
+              color: const Color(0xFF0D0D25),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
@@ -52,7 +52,7 @@ class BookDetailScreen extends StatelessWidget {
                       Text(
                         "Total: ${chapter.vocabWords.length} words",
                         style: const TextStyle(
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 228, 221, 221),
                           fontSize: 14,
                         ),
                       ),
@@ -69,7 +69,7 @@ class BookDetailScreen extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor: const Color(0xFF5E5EBC),
                           minimumSize: const Size.fromHeight(70),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2),
@@ -88,7 +88,7 @@ class BookDetailScreen extends StatelessWidget {
                       const SizedBox(height: 8),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
+                          backgroundColor: const Color(0xFF1F1F5D),
                           minimumSize: const Size.fromHeight(70),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2),

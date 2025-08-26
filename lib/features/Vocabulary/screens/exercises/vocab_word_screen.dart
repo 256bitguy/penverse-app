@@ -24,15 +24,16 @@ class VocabWordDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Image
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Image.network(
-                vocabWord.imageUrl!,
-                height: 200,
-                width: double.infinity,
-                fit: BoxFit.cover,
+            if (vocabWord.imageUrl != null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.network(
+                  vocabWord.imageUrl!,
+                  height: 200,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
             const SizedBox(height: 16),
 
             // Word

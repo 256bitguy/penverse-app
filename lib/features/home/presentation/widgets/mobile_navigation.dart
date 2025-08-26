@@ -126,7 +126,7 @@ class _CreateButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: Theme.of(context).primaryColor,
         ),
-        child: const Icon(
+        child: Icon(
           Icons.add,
           color: Colors.white,
           size: 32,

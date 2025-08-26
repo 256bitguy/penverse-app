@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/chapter.dart';
 import '../../widgets/chapter_card.dart';
 import '../exercises/story_screens.dart';
+ 
 import '../exercises/cloze_test_screen.dart';
 import '../exercises/practise_screen.dart';
 
@@ -34,12 +35,12 @@ class ChapterListScreen extends StatelessWidget {
             );
           },
           onVocabTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => VocabWordScreen(vocabWords: chapter.vocabWords),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (_) => VocabWordScreen(vocabWords: chapter.vocabWords),
+            //   ),
+            // );
           },
           onClozeTap: () {
             Navigator.push(
